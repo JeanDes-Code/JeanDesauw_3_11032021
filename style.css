@@ -26,6 +26,7 @@ h1{
 #localisation{
     display: flex;
     justify-content: center;
+    align-items: center;
     background: rgb(234,234,234);
     padding: 1rem 0rem 1rem 0rem ;
     margin-top: 0.5rem;
@@ -80,7 +81,7 @@ select{
     border-radius: 3rem;
     margin-top: 1rem;
     font-size: 1.2rem;
-    font-weight: 450;
+    font-weight: 400;
 }
 
 /* Bloc fonctionnement */
@@ -109,7 +110,6 @@ select{
     width: 70vw;
     align-items: center;
     background: #f6f6f6;
-    border: 0.1rem solid #f6f6f6;
     border-radius: 1.5rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 0.3rem 0.8rem 0.1rem rgb(234,234,234);
