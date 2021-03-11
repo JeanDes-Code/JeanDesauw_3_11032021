@@ -1,0 +1,171 @@
+html{
+    width: 100vw;
+}
+
+body{
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: center;
+    font-family: 'Shrikhand', cursive;
+    font-size: 1rem;
+}
+
+h1{
+    margin: 0;
+}
+
+
+/* Bloc localisation */
+
+#localisation{
+    display: flex;
+    justify-content: center;
+    background: rgb(234,234,234);
+    padding: 1rem 0rem 1rem 0rem ;
+    margin-top: 0.5rem;
+    width: 100vw;
+}
+
+.localisation__logo{
+    margin-right: 1rem;
+}
+
+select{
+    border: none;
+    appearance: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgb(234,234,234);
+}
+
+/*Bloc présentation*/
+
+#presentation{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: #f6f6f6;
+    width: 100vw;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.presentation__title{
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+    width: 70vw;
+}
+
+.presentation__text{
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 90vw;
+}
+
+.presentation__btn{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(#FF79DA, #9356DC);
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 450;
+}
+
+/* Bloc fonctionnement */
+
+.section__title{ /*s'applique aux titres principaux de Fonctionnement et Restaurants*/
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+#fonctionnement{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+#fonctionnement__steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fonctionnement__card{
+    display:flex;
+    width: 70vw;
+    align-items: center;
+    background: #f6f6f6;
+    border: 0.1rem solid #f6f6f6;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.3rem 0.8rem 0.1rem rgb(234,234,234);
+    padding: 0.8rem 3rem 0.5rem 0rem;
+    font-size: .92rem;
+}
+
+.fonctionnement__card_step_number{
+    background: #9356DC;
+    border-radius: 2rem;
+    padding: 0.8rem 0.9rem 0.4rem 0.9rem;
+    margin-left: -1rem;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.fonctionnement__card_logo{
+    color: grey;
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+
+.last_step{
+    background: rgb(245,237,255);
+}
+
+.logo_last_step{
+    color:#9356DC;
+}
+
+
+/*Main*/
+
+#restaurants{
+    display: flex;
+    flex-direction: column;
+    background: #f6f6f6;
+}
+
+.restaurants__card_container{
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurants__card_img{
+    object-fit: cover;
+    width: 5rem; /*a remplacer */
+}
+
+.restaurants__card_description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.restaurants__card_txt p, .restaurants__card_txt h3{
+    margin:0;
+}

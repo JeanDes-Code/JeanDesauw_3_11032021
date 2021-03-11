@@ -5,11 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
-    <title>Ohmyfood!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/8ed4d3c170.js" crossorigin="anonymous"></script>
+    <title>Ohmyfood! - Accueil</title>
 </head>
 
 <body>
-    
-</body>
 
+    <header>
+        <h1> 
+            ohmyfood
+        </h1>
+    </header>
+
+    <section id="localisation">
+        <i class="fas fa-map-marker-alt localisation__logo"></i>
+        <select>
+            <optgroup>
+                <option>
+                    Paris, Belleville
+                </option>
+                <option>
+                    Paris, Batignoles
+                </option>
+                <option>
+                    Paris, Passy
+                </option>
+            </optgroup>
+        </select>
+    </section>
+
+    <section id="presentation">
+        <h2 class="presentation__title">Réservez le menu qui vous convient</h2>
+        <p class="presentation__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+        <a class="presentation__btn" href='#'> Explorer nos restaurants</a>
+    </section>
+
+    <section id="fonctionnement">
+        <h2 class="section__title"> Fonctionnement </h2>
+        <div id="fonctionnement__steps">
+            <div class="fonctionnement__card">
+                <span class="fonctionnement__card_step_number"> 1 </span>
+                <i class="fas fa-mobile-alt fonctionnement__card_logo"></i>
+                <h3 class="fonctionnement__card_title"> Choisissez un restaurant </h3>    
+            </div>
+            <div class="fonctionnement__card">
+                <span class="fonctionnement__card_step_number"> 2 </span>
+                <i class="fas fa-list-ul fonctionnement__card_logo logo_step_two"></i>
+                <h3 class="fonctionnement__card_title"> Composez votre menu </h3>    
+            </div>
+            <div class="fonctionnement__card last_step">
+                <span class="fonctionnement__card_step_number"> 3 </span>
+                <i class="fas fa-store fonctionnement__card_logo logo_last_step"></i>
+                <h3 class="fonctionnement__card_title"> Dégustez au restaurant </h3>    
+            </div>
+    </section>
+
+    <main id="restaurants">
+        <h2 class="section__title"> Restaurants </h2>
+        <div>
+            <article class="restaurant__card">
+                <a class="restaurants__card_link" href="#">
+                    <div class="restaurant__card_container">
+                        <div class="restaurants__card_graphic_container">
+                            <div class="restaurants__new">
+                                <p> Nouveau </p>
+                            </div>
+                            <div class="restaurant__card_img_container"> 
+                                <img class="restaurants__card_img" src="images/restaurants/lapalettedugout.jpg" alt="La palette du goût"/>
+                            </div>
+                        </div>
+                        <div class="restaurants__card_description">
+                            <div class="restaurants__card_txt">
+                                <h3>La palette du goût</h3>
+                                <p> Ménilmontant </p>
+                            </div>
+                            <div class="restaurants__card_like">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>      
+                </a>
+            </article>
+        </div>
+    </main>
+</body>
 </html>
