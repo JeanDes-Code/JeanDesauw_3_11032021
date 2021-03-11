@@ -14,6 +14,7 @@ header{
     justify-content: center;
     font-family: 'Shrikhand', cursive;
     font-size: 1rem;
+    margin-top: 1.5rem;
 }
 
 h1{
@@ -28,7 +29,6 @@ h1{
     justify-content: center;
     align-items: center;
     background: rgb(234,234,234);
-    padding: 1rem 0rem 1rem 0rem ;
     margin-top: 0.5rem;
     width: 100vw;
 }
