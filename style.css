@@ -69,7 +69,7 @@ select{
 }
 
 .presentation__text{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.2rem;
     width: 90vw;
 }
