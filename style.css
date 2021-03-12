@@ -21,6 +21,12 @@ h1{
     margin: 0;
 }
 
+h3{
+    margin: 0;
+}
+p{
+    margin:0;
+}
 
 /* Bloc localisation */
 
@@ -151,23 +157,101 @@ select{
     background: #f6f6f6;
 }
 
-.restaurants__card_container{
-    max-width: 70vw;
-    display: flex;
-    flex-direction: column;
+.restaurants_title{
+    margin-left: 1rem;
 }
 
+.restaurants__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.restaurants__card_link{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+    color:black;
+    max-width: 90vw;
+    max-height: 14rem;
+    margin-bottom: 1.5rem;
+}
+
+
 .restaurants__card_img{
-    object-fit: cover;
-    width: 5rem; /*a remplacer */
+    object-fit:cover;
+    width: 100%;
+    max-height: 14rem;
+    border-radius: 1rem 1rem 2rem 2rem;
+}
+
+.restaurants__new{
+    background: rgb(153,226,208);
+    font-size: 0.9rem;
+    font-weight: 600;
+    position: absolute;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 0.1rem;
+    top: 0.8rem;
+    right: 0.8rem;
+    color: rgb(0,135,102);
 }
 
 .restaurants__card_description{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.8rem 1.5rem 1rem 0.8rem;
+    position: absolute;
+    background: white;
+    bottom:0;
+    width: 80vw;
+    flex-grow: 1;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0px 3px 20px -2px rgba(0,0,0,0.4);
+    font-size: 1rem;
 }
 
-.restaurants__card_txt p, .restaurants__card_txt h3{
-    margin:0;
+.restaurants__card_txt_title{
+    margin-bottom: 0.2rem;
+}
+
+.like_btn{
+    font-size: 1.5rem;
+    color:grey;
+    border:none;
+    background: unset;
+    outline:none;
+    cursor: pointer;
+}
+
+/*
+.like_btn:hover{
+    fill: linear-gradient(#FF79DA, #9356DC); 
+}*/
+
+
+footer{
+    margin-top: 4rem;
+    padding: 2rem 0rem 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    background: rgb(53,53,53);
+}
+
+h5{
+    font-family: 'Shrikhand', cursive;
+    margin-top: 0rem;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.footer__links{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
 }
