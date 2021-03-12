@@ -12,9 +12,20 @@ body{
 header{
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: 'Shrikhand', cursive;
     font-size: 1rem;
     margin-top: 1.5rem;
+    position:relative;
+}
+
+.return_home{
+    text-decoration: none;
+    color:black;
+    position: absolute;
+    top: 0.4rem;
+    left: 2rem;
+    font-size: 1.5rem;
 }
 
 h1{
