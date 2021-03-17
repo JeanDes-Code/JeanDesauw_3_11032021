@@ -487,3 +487,143 @@ h5{
 /* Apparition proggressive des plats sur les pages menus */
 
 /* Loading spinner */
+
+#loader{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100vw;
+    text-align: center;
+    background-color: rgba(245, 237, 255, 0.822);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: loader-vanish 5100ms cubic-bezier(.09,.53,.94,.31);
+    animation-fill-mode: both;
+}
+
+.loader__header{
+    position: relative;
+}
+
+.loader__logo{
+    position: absolute;
+    top: 20vh;
+    left: 45vw;
+    font-size: 4rem;
+}
+
+.loader__header_logo_start{
+    -webkit-animation: hourglass 1700ms ease-out;
+    animation: hourglass 1700ms ease-out ;
+    opacity: 0;
+}
+.loader__header_logo_half{
+    -webkit-animation: hourglass 1700ms 1520ms;
+    animation: hourglass 1700ms 1520ms;
+    opacity: 0;
+
+}
+.loader__header_logo_end{ 
+    -webkit-animation: hourglass-end 1500ms 3220ms;
+    animation: hourglass-end 1500ms 3220ms;
+    opacity: 0;
+}
+
+
+.loader__message_box{
+    position: relative;
+}
+ 
+.loader__message--1{
+    animation: scrolling-text 1200ms cubic-bezier(.09,.53,.94,.31);
+    animation-fill-mode: both;
+    opacity: 0;
+    animation-delay: 300ms;
+    position: absolute;
+    top: 50vh;
+    left: 20vw;
+}
+.loader__message--2{
+    animation: scrolling-text 1300ms cubic-bezier(.09,.53,.94,.31);
+    animation-fill-mode: both;
+    opacity: 0;
+    animation-delay: 1600ms;
+    position: absolute;
+    top: 50vh;
+    left: 10vw;
+}
+.loader__message--3{
+    animation: scrolling-text 1400ms cubic-bezier(.09,.53,.94,.31);
+    animation-fill-mode: both;
+    opacity: 0;
+    animation-delay: 3000ms;
+    position: absolute;
+    top: 50vh;
+    left: 8vw;
+}
+
+
+@keyframes scrolling-text {
+    0% {
+        transform: translateX(-100rem);
+        opacity:1;
+        transform-origin: left;
+    }
+    10% {
+        transform: translateX(4rem);
+        transform-origin: left;
+    }
+    20% {
+        transform: translateX(-4rem);
+        transform-origin: left;
+    }
+    30%, 80% {
+        transform: translateX(0);
+    }
+    99%{
+        opacity: 1;
+    }
+    100% {
+        transform:translateX(100rem);
+        transform-origin: left;
+        opacity:0;
+    }    
+}
+
+@keyframes loader-vanish {
+    0%,99% {
+        opacity: 1;
+    }
+    99.5% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hourglass {
+    0% , 90%{ 
+        opacity: 1; 
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
+@keyframes hourglass-end {
+    0%, 90%{
+        opacity: 1;
+    }
+    80%{
+        transform: rotate(180deg);
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+}
