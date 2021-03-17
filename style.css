@@ -486,7 +486,28 @@ h5{
 
 /* Apparition proggressive des plats sur les pages menus */
 
-/* Loading spinner */
+#menu__starter{
+    animation: fadein 1.5s;
+}
+
+#menu__main_course{
+    animation: fadein 3s;
+}
+
+#menu__dessert{
+    animation: fadein 6s;
+}
+
+@keyframes fadein {
+    0%, 20%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/* Loading spinner --A AMELIORER EN SASS--*/
 
 #loader{
     font-family: 'Shrikhand', cursive;
@@ -597,12 +618,15 @@ h5{
 @keyframes loader-vanish {
     0%,99% {
         opacity: 1;
+        z-index: 2;
     }
     99.5% {
         opacity: 0.8;
+        z-index: 2;
     }
     100% {
         opacity: 0;
+        z-index: -1;
     }
 }
 
