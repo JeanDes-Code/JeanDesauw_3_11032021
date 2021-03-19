@@ -529,25 +529,27 @@ h5{
     top: 0;
     z-index: 1;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     background-color: rgba(245, 237, 255, 0.822);
     display: flex;
     flex-direction: column;
+    align-items: left;
     opacity: 0;
     animation: loader-vanish 5100ms cubic-bezier(.09,.53,.94,.31);
     animation-fill-mode: both;
 }
 
-.loader__header{
-    position: relative;
+.loader__header_logo_position{
+    position: absolute;
+    left: 50%;
+    top: 20vh;
 }
 
 .loader__logo{
-    position: absolute;
-    top: 20vh;
-    left: 45vw;
     font-size: 4rem;
+    position: relative;
+    left:-50%;
 }
 
 .loader__header_logo_start{
@@ -562,8 +564,8 @@ h5{
 
 }
 .loader__header_logo_end{ 
-    -webkit-animation: hourglass-end 1500ms 3220ms;
-    animation: hourglass-end 1500ms 3220ms;
+    -webkit-animation: hourglass-end 1500ms 3040ms;
+    animation: hourglass-end 1500ms 3050ms;
     opacity: 0;
 }
 
@@ -571,33 +573,40 @@ h5{
 .loader__message_box{
     position: relative;
 }
+
+.loader__message_position{
+    position: relative;
+    left:-50%;
+}
  
 .loader__message--1{
-    animation: scrolling-text 1200ms cubic-bezier(.09,.53,.94,.31);
+    animation: scrolling-text 1200ms cubic-bezier(.78,0,.73,.65);
     animation-fill-mode: both;
     opacity: 0;
     animation-delay: 300ms;
     position: absolute;
     top: 50vh;
-    left: 20vw;
+    left:50%;
 }
+
 .loader__message--2{
-    animation: scrolling-text 1300ms cubic-bezier(.09,.53,.94,.31);
+    animation: scrolling-text 1300ms cubic-bezier(.78,0,.73,.65);
     animation-fill-mode: both;
     opacity: 0;
     animation-delay: 1600ms;
     position: absolute;
     top: 50vh;
-    left: 10vw;
+    left:50%;
+
 }
 .loader__message--3{
-    animation: scrolling-text 1400ms cubic-bezier(.09,.53,.94,.31);
+    animation: scrolling-text 1400ms cubic-bezier(.78,0,.73,.65);
     animation-fill-mode: both;
     opacity: 0;
     animation-delay: 3000ms;
     position: absolute;
     top: 50vh;
-    left: 8vw;
+    left:50%;
 }
 
 

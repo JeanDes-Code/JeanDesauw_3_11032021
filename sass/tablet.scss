@@ -47,20 +47,18 @@ select{
 
 
 .fonctionnement__card{
-    width: unset;
-    padding:0;
-    background: none;
-    box-shadow: none;
-    font-size: $sub-text;
-    i{
-        display: none;
-    }
+    width: 30%;
+    min-height: 4rem;
+    padding:0.5rem 0rem 0.5em 0rem;
     .fonctionnement__card_title{
         padding: 0rem 1rem 0rem 1rem;
     }
     .fonctionnement__card_step_number{
         margin:0;
-        padding:0.3rem 0.8rem 0.2rem 0.7rem;
+        padding:0.45rem 0.8rem 0.4rem 0.7rem;
+    }
+    h3{
+        font-size: $sub-text;
     }
 }
 
@@ -102,6 +100,9 @@ h5{
 .footer__bloc{
     flex-direction: column;
     margin-bottom: 2rem;
+    a{
+        margin-bottom: 2rem;
+    }
 }
 
 

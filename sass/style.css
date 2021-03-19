@@ -651,7 +651,7 @@ h5 {
   top: 0;
   z-index: 1;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   background-color: rgba(245, 237, 255, 0.822);
   display: -webkit-box;
@@ -661,6 +661,9 @@ h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   opacity: 0;
   -webkit-animation: loader-vanish 5100ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
           animation: loader-vanish 5100ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
@@ -668,15 +671,16 @@ h5 {
           animation-fill-mode: both;
 }
 
-.loader__header {
-  position: relative;
+.loader__header_logo_position {
+  position: absolute;
+  left: 50%;
+  top: 20vh;
 }
 
 .loader__logo {
-  position: absolute;
-  top: 20vh;
-  left: 45vw;
   font-size: 4rem;
+  position: relative;
+  left: -50%;
 }
 
 .loader__header_logo_start {
@@ -692,8 +696,8 @@ h5 {
 }
 
 .loader__header_logo_end {
-  -webkit-animation: hourglass-end 1500ms 3220ms;
-  animation: hourglass-end 1500ms 3220ms;
+  -webkit-animation: hourglass-end 1500ms 3040ms;
+  animation: hourglass-end 1500ms 3050ms;
   opacity: 0;
 }
 
@@ -701,9 +705,14 @@ h5 {
   position: relative;
 }
 
+.loader__message_position {
+  position: relative;
+  left: -50%;
+}
+
 .loader__message--1 {
-  -webkit-animation: scrolling-text 1200ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
-          animation: scrolling-text 1200ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
+  -webkit-animation: scrolling-text 1200ms cubic-bezier(0.78, 0, 0.73, 0.65);
+          animation: scrolling-text 1200ms cubic-bezier(0.78, 0, 0.73, 0.65);
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   opacity: 0;
@@ -711,12 +720,12 @@ h5 {
           animation-delay: 300ms;
   position: absolute;
   top: 50vh;
-  left: 20vw;
+  left: 50%;
 }
 
 .loader__message--2 {
-  -webkit-animation: scrolling-text 1300ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
-          animation: scrolling-text 1300ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
+  -webkit-animation: scrolling-text 1300ms cubic-bezier(0.78, 0, 0.73, 0.65);
+          animation: scrolling-text 1300ms cubic-bezier(0.78, 0, 0.73, 0.65);
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   opacity: 0;
@@ -724,12 +733,12 @@ h5 {
           animation-delay: 1600ms;
   position: absolute;
   top: 50vh;
-  left: 10vw;
+  left: 50%;
 }
 
 .loader__message--3 {
-  -webkit-animation: scrolling-text 1400ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
-          animation: scrolling-text 1400ms cubic-bezier(0.09, 0.53, 0.94, 0.31);
+  -webkit-animation: scrolling-text 1400ms cubic-bezier(0.78, 0, 0.73, 0.65);
+          animation: scrolling-text 1400ms cubic-bezier(0.78, 0, 0.73, 0.65);
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   opacity: 0;
@@ -737,7 +746,7 @@ h5 {
           animation-delay: 3000ms;
   position: absolute;
   top: 50vh;
-  left: 8vw;
+  left: 50%;
 }
 
 @-webkit-keyframes scrolling-text {

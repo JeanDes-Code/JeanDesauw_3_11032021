@@ -45,16 +45,9 @@ select {
 }
 
 .fonctionnement__card {
-  width: unset;
-  padding: 0;
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-size: 1.2rem;
-}
-
-.fonctionnement__card i {
-  display: none;
+  width: 30%;
+  min-height: 4rem;
+  padding: 0.5rem 0rem 0.5em 0rem;
 }
 
 .fonctionnement__card .fonctionnement__card_title {
@@ -63,7 +56,11 @@ select {
 
 .fonctionnement__card .fonctionnement__card_step_number {
   margin: 0;
-  padding: 0.3rem 0.8rem 0.2rem 0.7rem;
+  padding: 0.45rem 0.8rem 0.4rem 0.7rem;
+}
+
+.fonctionnement__card h3 {
+  font-size: 1.2rem;
 }
 
 .restaurants__card_link {
@@ -110,6 +107,10 @@ h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.footer__bloc a {
   margin-bottom: 2rem;
 }
 
