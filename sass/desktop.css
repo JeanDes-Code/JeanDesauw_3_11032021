@@ -109,6 +109,7 @@ header {
 
 .restaurants__card_link {
   max-width: 40%;
+  width: 50%;
 }
 
 .restaurant__card_img_container {
@@ -214,7 +215,7 @@ h5 {
 }
 
 #menu .meal__selected {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 #menu__dessert {
@@ -227,5 +228,7 @@ h5 {
 
 #loader {
   max-width: 1025px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=desktop.css.map */

@@ -1,5 +1,6 @@
 $title:3rem;
 $sub-title: 2.2rem;
+$selected: 1.8rem;
 $big-element:1.5rem;
 $text:1.3rem;
 $sub-text:0.8rem;
@@ -99,6 +100,7 @@ header{
 
 .restaurants__card_link{
     max-width: 40%;
+    width: 50%;
 }
 
 .restaurant__card_img_container{
@@ -192,7 +194,7 @@ h5{
         font-size: $text;
     }
     .meal__selected{
-        font-size: $big-element;
+        font-size: $selected;
     }
 }
 
@@ -206,4 +208,6 @@ h5{
 
 #loader{
     max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
 }

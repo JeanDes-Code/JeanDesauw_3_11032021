@@ -1,3 +1,6 @@
+$primary:#9356DC;
+$degrade: linear-gradient(#FF79DA, #9356DC);
+
 html{
     width: 100vw;
 }
@@ -195,6 +198,10 @@ select{
     max-width: 90vw;
     max-height: 14rem;
     margin-bottom: 3.5rem;
+    transition: 100ms;
+    &:hover{
+        transform:scale(1.01);
+    }
 }
 
 .restaurant__card_img_container{
@@ -241,7 +248,10 @@ select{
     margin-bottom: 0.2rem;
 }
 
-.like_btn{
+
+.like{
+    background:none;
+    border:none;
     font-size: 1.5rem;
     color:white;
     -webkit-text-stroke: 0.1rem grey;
@@ -321,7 +331,7 @@ h5{
     margin:0;
 }
 
-.like_btn_menu{
+.like_menu{
     color: #f6f6f6;;
     -webkit-text-stroke: 0.1rem black;
 }
@@ -445,27 +455,27 @@ h5{
 /*Animations */
 /* Ajout de plats */
 
-.menu__card:hover .meal__selected{
+.menu__card:hover .meal__selected, .menu__card:active .meal__selected, .menu__card:focus .meal__selected{
     right:0;
     transition: right 400ms;
 }
 
-.menu__card:hover .meal__selected_logo{
+.menu__card:hover .meal__selected_logo, .menu__card:active .meal__selected_logo, .menu__card:focus .meal__selected_logo{
     transform: rotate(720deg);
     transition: 500ms ;
 }
 
-.menu__card:hover .meal__price{
+.menu__card:hover .meal__price, .menu__card:active .meal__price, .menu__card:focus .meal__price{
     right: 4.5rem;
     transition: right 300ms;
 }
 
-.menu__card:hover .meal__description{
+.menu__card:hover .meal__description, .menu__card:active .meal__description, .menu__card:focus .meal__description{
     width: 70%;
     transition: 300ms;
 }
 
-.menu__card:hover .meal__title{
+.menu__card:hover .meal__title, .menu__card:active .meal__title, .menu__card:focus .meal__title{
     width: 70%;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -474,15 +484,21 @@ h5{
 
 /* Remplissage du bouton "j'aime" */
 
-.like_btn:hover{
+.like:hover, .like:active, .like:focus{
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-text-stroke: transparent;
     overflow: visible;
     transform:  scale(1.2);
+    -moz-transform: scale(1.2);
     transition: 400ms cubic-bezier(.31,.82,.05,3);
+    -moz-transition:400ms cubic-bezier(.31,.82,.05,3);
+    outline:none;
 }
 
 /* Survol des boutons principaux : couleur éclaircie, ombre portée plus marquée */
@@ -531,13 +547,41 @@ h5{
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: rgba(245, 237, 255, 0.822);
+    background-color: rgba(245, 237, 255, 0.9);
     display: flex;
     flex-direction: column;
     align-items: left;
     opacity: 0;
-    animation: loader-vanish 5100ms cubic-bezier(.09,.53,.94,.31);
+    animation: loader-vanish 5200ms ease-out;
     animation-fill-mode: both;
+}
+
+%border{
+    width: 100%;
+    height: 1rem;
+    background: $degrade;
+    opacity: 1;
+    animation: fadein-out 5200ms ease-out;
+}
+
+.loader__border_top{
+    @extend %border;
+    position: absolute;
+    top:10%;
+}
+.loader__border_bottom{
+    @extend %border;
+    position: absolute;
+    bottom: 25%;
+}
+
+.loader__background{
+    background-color: rgba(245, 237, 255, 1);
+    position: absolute;
+    width: 100%;
+    height:65%;
+    top:10%;
+    z-index: -1;
 }
 
 .loader__header_logo_position{
@@ -553,22 +597,21 @@ h5{
 }
 
 .loader__header_logo_start{
-    -webkit-animation: hourglass 1700ms ease-out;
-    animation: hourglass 1700ms ease-out ;
+    -webkit-animation: hourglass-start 1700ms 300ms ease-in-out;
+    animation: hourglass-start 1700ms 300ms ease-in-out ;
     opacity: 0;
 }
 .loader__header_logo_half{
-    -webkit-animation: hourglass 1700ms 1520ms;
-    animation: hourglass 1700ms 1520ms;
+    -webkit-animation: hourglass 1700ms 1820ms;
+    animation: hourglass 1700ms 1820ms;
     opacity: 0;
 
 }
 .loader__header_logo_end{ 
-    -webkit-animation: hourglass-end 1500ms 3040ms;
-    animation: hourglass-end 1500ms 3050ms;
+    -webkit-animation: hourglass-end 1300ms ease-out 3350ms;
+    animation: hourglass-end 1300ms 3350ms;
     opacity: 0;
 }
-
 
 .loader__message_box{
     position: relative;
@@ -580,10 +623,10 @@ h5{
 }
  
 .loader__message--1{
-    animation: scrolling-text 1200ms cubic-bezier(.78,0,.73,.65);
+    animation: scrolling-text 1300ms cubic-bezier(.78,0,.73,.65);
     animation-fill-mode: both;
     opacity: 0;
-    animation-delay: 300ms;
+    animation-delay: 400ms;
     position: absolute;
     top: 50vh;
     left:50%;
@@ -593,7 +636,7 @@ h5{
     animation: scrolling-text 1300ms cubic-bezier(.78,0,.73,.65);
     animation-fill-mode: both;
     opacity: 0;
-    animation-delay: 1600ms;
+    animation-delay: 1700ms;
     position: absolute;
     top: 50vh;
     left:50%;
@@ -613,7 +656,7 @@ h5{
 @keyframes scrolling-text {
     0% {
         transform: translateX(-100rem);
-        opacity:1;
+        opacity:0.9;
         transform-origin: left;
     }
     10% {
@@ -652,8 +695,24 @@ h5{
     }
 }
 
+
+@keyframes hourglass-start {
+    0%, 90%{
+        opacity: 1;
+    }
+    0%{
+        transform: scale(3);
+    }
+    5%{
+        transform: scale(1);
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
 @keyframes hourglass {
-    0% , 90%{ 
+    0%, 90%{ 
         opacity: 1; 
     }
     100% { 
@@ -662,14 +721,34 @@ h5{
 }
 
 @keyframes hourglass-end {
-    0%, 90%{
+    0%{
         opacity: 1;
+        transform: scale(1)
     }
     80%{
-        transform: rotate(180deg);
+        transform:rotate(180deg) scale(1);
+        opacity: 1;
+    }
+
+    95%{
+        transform: rotate(180deg) scale(1.2);
+        opacity:1;
+
     }
     100%{
         opacity: 0;
-        transform: rotate(180deg);
+        transform: rotate(180deg) scale(0);
+    }
+}
+
+@keyframes fadein-out {
+    0%{
+        opacity:0;
+    }
+    25%, 75%{
+        opacity:1;
+    }
+    100% {
+        opacity:0;
     }
 }
