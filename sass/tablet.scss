@@ -1,4 +1,5 @@
 $title:4rem;
+$sub-title: 3rem;
 $big-element:2rem;
 $text:1.5rem;
 $sub-text:1.2rem;
@@ -55,7 +56,7 @@ select{
         display: none;
     }
     .fonctionnement__card_title{
-        padding-left: 1rem;
+        padding: 0rem 1rem 0rem 1rem;
     }
     .fonctionnement__card_step_number{
         margin:0;
@@ -91,6 +92,7 @@ h5{
 .footer__container{
     flex-direction: row;
     justify-content: space-around;
+    margin-left: -3rem;
 }
 
 .footer__links{
@@ -100,4 +102,48 @@ h5{
 .footer__bloc{
     flex-direction: column;
     margin-bottom: 2rem;
+}
+
+
+/* pages de menus*/
+
+.return_home{
+    font-size: $title;
+}
+
+#banniere{
+    .banniere__img{
+        height: 18rem;
+    }
+    h6{
+        font-size: $sub-title;
+    }
+    .like_btn_menu{
+        font-size: $big-element;
+    }
+}
+
+#menu{
+    .menu__title{
+        font-size: $big-element;
+    }
+    .menu__underline{
+        width: $title;
+    }
+    .meal__title{
+        font-size: $text;
+    }
+    .meal__description{
+        font-size: $text;
+    }
+    p{
+        font-size: $text;
+    }
+    .meal__selected{
+        font-size: $big-element;
+    }
+}
+
+.command__btn{
+    font-size: $big-element;
 }

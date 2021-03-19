@@ -58,7 +58,7 @@ select {
 }
 
 .fonctionnement__card .fonctionnement__card_title {
-  padding-left: 1rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 .fonctionnement__card .fonctionnement__card_step_number {
@@ -98,6 +98,7 @@ h5 {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-left: -3rem;
 }
 
 .footer__links {
@@ -110,5 +111,50 @@ h5 {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 2rem;
+}
+
+/* pages de menus*/
+.return_home {
+  font-size: 4rem;
+}
+
+#banniere .banniere__img {
+  height: 18rem;
+}
+
+#banniere h6 {
+  font-size: 3rem;
+}
+
+#banniere .like_btn_menu {
+  font-size: 2rem;
+}
+
+#menu .menu__title {
+  font-size: 2rem;
+}
+
+#menu .menu__underline {
+  width: 4rem;
+}
+
+#menu .meal__title {
+  font-size: 1.5rem;
+}
+
+#menu .meal__description {
+  font-size: 1.5rem;
+}
+
+#menu p {
+  font-size: 1.5rem;
+}
+
+#menu .meal__selected {
+  font-size: 2rem;
+}
+
+.command__btn {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=tablet.css.map */
