@@ -1,0 +1,209 @@
+$title:3rem;
+$sub-title: 2.2rem;
+$big-element:1.5rem;
+$text:1.3rem;
+$sub-text:0.8rem;
+$width:unset;
+$max-width: 1025px;
+
+body{
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 5px 20px 2px rgba(0,0,0,0.6);
+}
+
+h1{
+    font-size:$title;
+}
+
+h3{
+    font-size: $text;
+}
+
+p{
+    font-size: $sub-text;
+}
+
+header{
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.return_home{
+    top: 2.5rem;
+}
+
+#localisation{
+    width: $width;
+    select{
+        font-size: $big-element;
+    }
+}
+
+.localisation__logo{
+    font-size: $big-element;
+}
+
+#presentation{
+    width: $width;
+    .presentation__title{
+        font-size: $big-element;
+    }
+    
+    .presentation__text{
+        font-size: $text;
+    }
+    
+    .presentation__btn{
+        font-size: $text;
+    }
+}
+
+.section__title{
+    font-size: $big-element;
+}
+
+#fonctionnement__steps{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.fonctionnement__card{
+    width: 30%;
+    min-height: 4rem;
+    padding:1rem 0rem 1rem 0rem;
+    .fonctionnement__card_title{
+        padding: 0rem 1rem 0rem 1rem;
+    }
+    .fonctionnement__card_step_number{
+        margin:0;
+        padding:0.5rem 0.8rem 0.5rem 0.7rem;
+    }
+    .fonctionnement__card_logo{
+        font-size: $text;
+    }
+}
+
+.restaurants__card{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.restaurant__title{
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+.restaurants__card_link{
+    max-width: 40%;
+}
+
+.restaurant__card_img_container{
+    width: $width;
+}
+
+.restaurants__card_link{
+    margin-bottom: 5rem;
+}
+
+.restaurants__card_txt{
+    p{
+        font-size: $text;
+    }
+}
+
+.like_btn{
+    font-size: $big-element;
+}
+
+
+footer{
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+
+h5{
+    font-size: $title;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.footer__container{
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -3rem;
+}
+
+.footer__links{
+    font-size: $text;
+}
+
+.footer__bloc{
+    flex-direction: column;
+    margin-bottom: 2rem;
+    a{
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+/* pages de menus*/
+
+.return_home{
+    font-size: $title;
+}
+
+#banniere{
+    .banniere__img{
+        height: 18rem;
+    }
+    h6{
+        font-size: $sub-title;
+    }
+    .like_btn_menu{
+        font-size: $big-element;
+    }
+}
+
+#menu{
+    .menu__title{
+        font-size: $big-element;
+    }
+    .menu__underline{
+        width: $title;
+    }
+    .menu__style{
+        width: 80%;
+    }
+    .menu__card{
+        width: 80%;
+        margin-left: 4.5rem;
+    }
+    .meal__title{
+        font-size: $text;
+    }
+    .meal__description{
+        font-size: $text;
+    }
+    p{
+        font-size: $text;
+    }
+    .meal__selected{
+        font-size: $big-element;
+    }
+}
+
+#menu__dessert{
+    margin-bottom: 5rem;
+}
+
+.command__btn{
+    font-size: $big-element;
+}
+
+#loader{
+    max-width: $max-width;
+}
