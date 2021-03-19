@@ -1,0 +1,103 @@
+$title:4rem;
+$big-element:2rem;
+$text:1.5rem;
+$sub-text:1.2rem;
+
+h1{
+    font-size:$title;
+}
+
+h3{
+    font-size: $text;
+}
+
+p{
+    font-size: $sub-text;
+}
+
+select{
+    font-size: $big-element;
+}
+
+.localisation__logo{
+    font-size: $big-element;
+}
+
+.presentation__title{
+    font-size: $big-element;
+}
+
+.presentation__text{
+    font-size: $text;
+}
+
+.presentation__btn{
+    font-size: $text;
+}
+
+.section__title{
+    font-size: $big-element;
+}
+
+#fonctionnement__steps{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.fonctionnement__card{
+    width: unset;
+    padding:0;
+    background: none;
+    box-shadow: none;
+    font-size: $sub-text;
+    i{
+        display: none;
+    }
+    .fonctionnement__card_title{
+        padding-left: 1rem;
+    }
+    .fonctionnement__card_step_number{
+        margin:0;
+        padding:0.3rem 0.8rem 0.2rem 0.7rem;
+    }
+}
+
+.restaurants__card_link{
+    margin-bottom: 5rem;
+}
+
+.restaurants__card_txt{
+    p{
+        font-size: $text;
+    }
+}
+
+.like_btn{
+    font-size: $text;
+}
+
+
+footer{
+    flex-direction: row;
+}
+
+h5{
+    font-size: $title;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.footer__container{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer__links{
+    font-size: $text;
+}
+
+.footer__bloc{
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
