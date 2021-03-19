@@ -95,10 +95,15 @@ header{
     width: 100%;
     justify-content: space-around;
     padding-bottom: 3rem;
+    bottom:-6rem;
 }
 
 .restaurants__card_link{
     max-width: 40%;
+}
+
+#menu{
+    margin-top: 6rem;
 }
 
 .restaurant__card_img_container{
