@@ -1,0 +1,231 @@
+body {
+  max-width: 1025px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+header {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.return_home {
+  top: 2.5rem;
+}
+
+#localisation {
+  width: unset;
+}
+
+#localisation select {
+  font-size: 1.5rem;
+}
+
+.localisation__logo {
+  font-size: 1.5rem;
+}
+
+#presentation {
+  width: unset;
+}
+
+#presentation .presentation__title {
+  font-size: 1.5rem;
+}
+
+#presentation .presentation__text {
+  font-size: 1.3rem;
+}
+
+#presentation .presentation__btn {
+  font-size: 1.3rem;
+}
+
+.section__title {
+  font-size: 1.5rem;
+}
+
+#fonctionnement__steps {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.fonctionnement__card {
+  width: 30%;
+  min-height: 4rem;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.fonctionnement__card .fonctionnement__card_title {
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.fonctionnement__card .fonctionnement__card_step_number {
+  margin: 0;
+  padding: 0.5rem 0.8rem 0.5rem 0.7rem;
+}
+
+.fonctionnement__card .fonctionnement__card_logo {
+  font-size: 1.3rem;
+}
+
+.restaurants__card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.restaurant__title {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 3rem;
+}
+
+.restaurants__card_link {
+  max-width: 40%;
+}
+
+.restaurant__card_img_container {
+  width: unset;
+}
+
+.restaurants__card_link {
+  margin-bottom: 5rem;
+}
+
+.restaurants__card_txt p {
+  font-size: 1.3rem;
+}
+
+.like_btn {
+  font-size: 1.5rem;
+}
+
+footer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+
+h5 {
+  font-size: 3rem;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.footer__container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: -3rem;
+}
+
+.footer__links {
+  font-size: 1.3rem;
+}
+
+.footer__bloc {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.footer__bloc a {
+  margin-bottom: 2.5rem;
+}
+
+/* pages de menus*/
+.return_home {
+  font-size: 3rem;
+}
+
+#banniere .banniere__img {
+  height: 18rem;
+}
+
+#banniere h6 {
+  font-size: 2.2rem;
+}
+
+#banniere .like_btn_menu {
+  font-size: 1.5rem;
+}
+
+#menu .menu__title {
+  font-size: 1.5rem;
+}
+
+#menu .menu__underline {
+  width: 3rem;
+}
+
+#menu .menu__style {
+  width: 80%;
+}
+
+#menu .menu__card {
+  width: 80%;
+  margin-left: 4.5rem;
+}
+
+#menu .meal__title {
+  font-size: 1.3rem;
+}
+
+#menu .meal__description {
+  font-size: 1.3rem;
+}
+
+#menu p {
+  font-size: 1.3rem;
+}
+
+#menu .meal__selected {
+  font-size: 1.5rem;
+}
+
+#menu__dessert {
+  margin-bottom: 5rem;
+}
+
+.command__btn {
+  font-size: 1.5rem;
+}
+
+#loader {
+  max-width: 1025px;
+}
+/*# sourceMappingURL=desktop.css.map */

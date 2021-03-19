@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../sass/style.css" />
+    <link rel="stylesheet" href="../sass/tablet.css" media="all and (min-width: 763px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="../sass/desktop.css" media="all and (min-width: 1025px)">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">  
     <script src="https://kit.fontawesome.com/8ed4d3c170.js" crossorigin="anonymous"></script>
@@ -64,7 +66,7 @@
                 <div class="meal__selected"> <i class=" meal__selected_logo fas fa-check-circle"></i> </div>
             </div>
         </section>
-        <section id="menu__main_course">
+        <section id="menu__main_course" class="menu__style">
             <h6 class="menu__title"> Plats </h6>
             <div class="menu__underline"></div>
             <div class="menu__card">
@@ -98,7 +100,7 @@
                 <div class="meal__selected"> <i class=" meal__selected_logo fas fa-check-circle"></i> </div>
             </div>
         </section>
-        <section id="menu__dessert">
+        <section id="menu__dessert" class="menu__style">
             <h6 class="menu__title"> Dessert </h6>
             <div class="menu__underline"></div>
             <div class="menu__card">
@@ -143,10 +145,16 @@
 
     <footer>
         <h5>ohmyfood</h5>
-        <a class="footer__links" href='#'> <i class="fas fa-utensils"></i> Proposer un restaurant</a>
-        <a class="footer__links" href='#'> <i class="fas fa-hands-helping"></i> Devenir partenaire</a>
-        <a class="footer__links" href='#'> Mentions légales</a>
-        <a class="footer__links" href='mailto:desauwjean@gmail.com'> Contact</a>
+        <div class="footer__container">
+            <div class="footer__bloc">
+                <a class="footer__links" href='#'> <i class="fas fa-utensils"></i> Proposer un restaurant</a>
+                <a class="footer__links" href='#'> <i class="fas fa-hands-helping"></i> Devenir partenaire</a>
+            </div>
+            <div class="footer__bloc">
+                <a class="footer__links" href='#'> Mentions légales</a>
+                <a class="footer__links" href='mailto:desauwjean@gmail.com'> Contact</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
