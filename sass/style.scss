@@ -524,6 +524,15 @@ h5{
 
 /* Apparition proggressive des plats sur les pages menus */
 
+@for $i from 1 through 13 {
+    .m-#{$i}{
+        opacity: 1;
+        animation: fadein 800ms;
+        animation-delay: 0 + ($i * 300ms);
+        animation-fill-mode: both;
+    }
+}
+/*
 #menu__starter{
     animation: fadein 1s;
 }
@@ -534,18 +543,11 @@ h5{
 
 #menu__dessert{
     animation: fadein 4s;
-}
+}*/
 
-@keyframes fadein {
-    0%, 20%{
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
-}
 
-/* Loading spinner --A AMELIORER EN SASS--*/
+
+/* Loading spinner */
 
 #loader{
     font-family: 'Shrikhand', cursive;
@@ -559,7 +561,6 @@ h5{
     background-color: rgba(231, 231, 231, 0.9);
     display: flex;
     flex-direction: column;
-    align-items: left;
     opacity: 0;
     animation: loader-vanish 5200ms ease-out;
     animation-fill-mode: both;

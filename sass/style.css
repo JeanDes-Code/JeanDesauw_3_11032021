@@ -222,6 +222,24 @@
   }
 }
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   width: 100vw;
 }
@@ -854,40 +872,149 @@ h5 {
 }
 
 /* Apparition proggressive des plats sur les pages menus */
-#menu__starter {
-  -webkit-animation: fadein 1s;
-          animation: fadein 1s;
+.m-1 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-#menu__main_course {
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
+.m-2 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-#menu__dessert {
-  -webkit-animation: fadein 4s;
-          animation: fadein 4s;
+.m-3 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadein {
-  0%, 20% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.m-4 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-@keyframes fadein {
-  0%, 20% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.m-5 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-/* Loading spinner --A AMELIORER EN SASS--*/
+.m-6 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-7 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 2100ms;
+          animation-delay: 2100ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-8 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-9 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 2700ms;
+          animation-delay: 2700ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-10 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-11 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 3300ms;
+          animation-delay: 3300ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-12 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 3600ms;
+          animation-delay: 3600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-13 {
+  opacity: 1;
+  -webkit-animation: fadein 800ms;
+          animation: fadein 800ms;
+  -webkit-animation-delay: 3900ms;
+          animation-delay: 3900ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+/*
+#menu__starter{
+    animation: fadein 1s;
+}
+
+#menu__main_course{
+    animation: fadein 3s;
+}
+
+#menu__dessert{
+    animation: fadein 4s;
+}*/
+/* Loading spinner */
 #loader {
   font-family: 'Shrikhand', cursive;
   font-size: 2rem;
@@ -905,9 +1032,6 @@ h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   opacity: 0;
   -webkit-animation: loader-vanish 5200ms ease-out;
           animation: loader-vanish 5200ms ease-out;
