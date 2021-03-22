@@ -1,5 +1,9 @@
+@import 'animations.scss';
+
 $primary:#9356DC;
 $degrade: linear-gradient(#FF79DA, #9356DC);
+$degrade-inv: linear-gradient( #9356DC, #FF79DA);
+$btn_color: linear-gradient(358deg, rgba(147,86,220,1) 0%, rgba(173,94,220,1) 23%, rgba(185,98,220,1) 42%, rgba(255,121,218,1) 100%)
 
 html{
     width: 100vw;
@@ -65,8 +69,9 @@ select{
     outline: none;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     background: rgb(234,234,234);
+    cursor: pointer;
 }
 
 /*Bloc présentation*/
@@ -83,7 +88,7 @@ select{
 }
 
 .presentation__title{
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     width: 70vw;
@@ -95,25 +100,30 @@ select{
     width: 90vw;
 }
 
-.presentation__btn{
-    text-decoration: none;
+%btn{
     color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    padding: 1rem 1.3rem 1rem 1.3rem;
-    border-radius: 3rem;
-    margin-top: 1rem;
+    background: $btn_color;
+    border-radius: 2.8rem;
     font-size: 1.2rem;
     font-weight: 400;
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
     cursor:pointer;
+    border: none;
+    outline: none;
+}
+
+.presentation__btn{
+    @extend %btn;
+    margin-top: 1rem;
     margin-top: 2rem;
+    padding: 1.2rem 1.7rem 1.2rem 1.7rem;
 }
 
 /* Bloc fonctionnement */
 
 .section__title{ /*s'applique aux titres principaux de Fonctionnement et Restaurants*/
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .fonctionnement__title{
@@ -143,7 +153,29 @@ select{
     box-shadow: 0 0.3rem 0.8rem 0.1rem rgb(234,234,234);
     padding: 0.8rem 3rem 0.5rem 0rem;
     font-size: .92rem;
+    h3{
+        font-weight: 500;
+    }
 }
+
+.first_step{
+    h3{
+        margin-left: .4rem;
+    }
+}
+
+.second_step{
+    h3{
+        margin-left: .1rem;
+    }
+}
+
+.last_step{
+    h3{
+        margin-left: -.1rem;
+    }
+}
+
 
 .fonctionnement__card_step_number{
     background: #9356DC;
@@ -156,7 +188,7 @@ select{
 
 .fonctionnement__card_logo{
     color: grey;
-    margin: 0rem 1rem 0rem 1rem;
+    margin: 0rem 1.2rem 0rem 1rem;
 }
 
 
@@ -178,7 +210,7 @@ select{
     padding-bottom: 3rem;
 }
 
-.restaurants_title{
+.main_title{
     margin-left: 1rem;
 }
 
@@ -254,7 +286,7 @@ select{
     border:none;
     font-size: 1.5rem;
     color:white;
-    -webkit-text-stroke: 0.1rem grey;
+    -webkit-text-stroke: 0.1rem black;
     border:none;
     background: unset;
     outline:none;
@@ -286,11 +318,28 @@ h5{
     flex-direction: column;
 }
 
+.strong_links{
+    font-weight: 400;
+}
+
+.weak_links{
+    font-weight: 300;
+}
+
 .footer__links{
     text-decoration: none;
     color: white;
     margin-bottom: 0.8rem;
     font-size: 1rem;
+}
+
+.footer__logo{
+    margin-right: .6rem;
+}
+
+.footer__logo_var{
+    font-size: 0.8rem;
+    margin-right: .4rem;
 }
 
 
@@ -314,13 +363,13 @@ h5{
 
 .restaurant__title{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     position: absolute;
     bottom: -2.2rem;
     background: #f6f6f6;
-    padding: 1.5rem 0 0rem 0; 
+    padding: 1.5rem 0 0 0; 
     border-radius: 2rem 2rem 0 0 ;
 }
 
@@ -328,12 +377,13 @@ h5{
     font-family: 'Shrikhand', cursive;
     font-size: 1.8rem;
     font-weight: 500;
-    margin:0;
+    margin:0 0 0 1.3rem;
 }
 
 .like_menu{
     color: #f6f6f6;;
     -webkit-text-stroke: 0.1rem black;
+    margin-right: 2rem;
 }
 
 /*Menu */
@@ -384,6 +434,7 @@ h5{
     box-shadow: 0 0.3rem 0.8rem 0.1rem rgb(234,234,234);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .menu__description{
@@ -440,15 +491,8 @@ h5{
 }
 
 .command__btn{
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    padding: 1rem 2.5rem 1rem 2.5rem;
-    border-radius: 3rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-    box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
-    cursor:pointer;
+    @extend %btn;
+    padding: 1.2rem 3.2rem 1.2rem 3.2rem;
 }
 
 
@@ -466,7 +510,7 @@ h5{
 }
 
 .menu__card:hover .meal__price, .menu__card:active .meal__price, .menu__card:focus .meal__price{
-    right: 4.5rem;
+    right: 5.5rem;
     transition: right 300ms;
 }
 
@@ -504,17 +548,26 @@ h5{
 /* Survol des boutons principaux : couleur éclaircie, ombre portée plus marquée */
 
 .presentation__btn:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#b256dc));
+    background: lighten($btn_color,5%);
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .command__btn:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#b256dc));
+    background: lighten($btn_color,5%);
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 /* Apparition proggressive des plats sur les pages menus */
 
+@for $i from 1 through 13 {
+    .m-#{$i}{
+        opacity: 1;
+        animation: fadein 800ms;
+        animation-delay: 0 + ($i * 300ms);
+        animation-fill-mode: both;
+    }
+}
+/*
 #menu__starter{
     animation: fadein 1s;
 }
@@ -525,18 +578,11 @@ h5{
 
 #menu__dessert{
     animation: fadein 4s;
-}
+}*/
 
-@keyframes fadein {
-    0%, 20%{
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
-}
 
-/* Loading spinner --A AMELIORER EN SASS--*/
+
+/* Loading spinner */
 
 #loader{
     font-family: 'Shrikhand', cursive;
@@ -547,10 +593,9 @@ h5{
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: rgba(245, 237, 255, 0.9);
+    background-color: rgba(231, 231, 231, 0.9);
     display: flex;
     flex-direction: column;
-    align-items: left;
     opacity: 0;
     animation: loader-vanish 5200ms ease-out;
     animation-fill-mode: both;
@@ -559,24 +604,25 @@ h5{
 %border{
     width: 100%;
     height: 1rem;
-    background: $degrade;
     opacity: 1;
     animation: fadein-out 5200ms ease-out;
 }
 
 .loader__border_top{
     @extend %border;
+    background: $degrade;
     position: absolute;
     top:10%;
 }
 .loader__border_bottom{
     @extend %border;
+    background: $degrade-inv;
     position: absolute;
     bottom: 25%;
 }
 
 .loader__background{
-    background-color: rgba(245, 237, 255, 1);
+    background-color: rgb(231, 231, 231);
     position: absolute;
     width: 100%;
     height:65%;
@@ -594,6 +640,7 @@ h5{
     font-size: 4rem;
     position: relative;
     left:-50%;
+    color:rgb(66, 66, 66);
 }
 
 .loader__header_logo_start{
@@ -601,12 +648,14 @@ h5{
     animation: hourglass-start 1700ms 300ms ease-in-out ;
     opacity: 0;
 }
+
 .loader__header_logo_half{
     -webkit-animation: hourglass 1700ms 1820ms;
     animation: hourglass 1700ms 1820ms;
     opacity: 0;
 
 }
+
 .loader__header_logo_end{ 
     -webkit-animation: hourglass-end 1300ms ease-out 3350ms;
     animation: hourglass-end 1300ms 3350ms;
@@ -620,6 +669,11 @@ h5{
 .loader__message_position{
     position: relative;
     left:-50%;
+}
+
+.loader__message{
+    color:rgb(51, 51, 51);
+    font-weight: 200;
 }
  
 .loader__message--1{
@@ -642,6 +696,7 @@ h5{
     left:50%;
 
 }
+
 .loader__message--3{
     animation: scrolling-text 1400ms cubic-bezier(.78,0,.73,.65);
     animation-fill-mode: both;
@@ -653,102 +708,3 @@ h5{
 }
 
 
-@keyframes scrolling-text {
-    0% {
-        transform: translateX(-100rem);
-        opacity:0.9;
-        transform-origin: left;
-    }
-    10% {
-        transform: translateX(4rem);
-        transform-origin: left;
-    }
-    20% {
-        transform: translateX(-4rem);
-        transform-origin: left;
-    }
-    30%, 80% {
-        transform: translateX(0);
-    }
-    99%{
-        opacity: 1;
-    }
-    100% {
-        transform:translateX(100rem);
-        transform-origin: left;
-        opacity:0;
-    }    
-}
-
-@keyframes loader-vanish {
-    0%,99% {
-        opacity: 1;
-        z-index: 2;
-    }
-    99.5% {
-        opacity: 0.8;
-        z-index: 2;
-    }
-    100% {
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
-
-@keyframes hourglass-start {
-    0%, 90%{
-        opacity: 1;
-    }
-    0%{
-        transform: scale(3);
-    }
-    5%{
-        transform: scale(1);
-    }
-    100% { 
-        opacity: 0;
-    }
-}
-
-@keyframes hourglass {
-    0%, 90%{ 
-        opacity: 1; 
-    }
-    100% { 
-        opacity: 0;
-    }
-}
-
-@keyframes hourglass-end {
-    0%{
-        opacity: 1;
-        transform: scale(1)
-    }
-    80%{
-        transform:rotate(180deg) scale(1);
-        opacity: 1;
-    }
-
-    95%{
-        transform: rotate(180deg) scale(1.2);
-        opacity:1;
-
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(180deg) scale(0);
-    }
-}
-
-@keyframes fadein-out {
-    0%{
-        opacity:0;
-    }
-    25%, 75%{
-        opacity:1;
-    }
-    100% {
-        opacity:0;
-    }
-}
