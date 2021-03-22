@@ -3,6 +3,7 @@
 $primary:#9356DC;
 $degrade: linear-gradient(#FF79DA, #9356DC);
 $degrade-inv: linear-gradient( #9356DC, #FF79DA);
+$btn_color: linear-gradient(358deg, rgba(147,86,220,1) 0%, rgba(173,94,220,1) 23%, rgba(185,98,220,1) 42%, rgba(255,121,218,1) 100%)
 
 html{
     width: 100vw;
@@ -68,7 +69,7 @@ select{
     outline: none;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     background: rgb(234,234,234);
     cursor: pointer;
 }
@@ -87,7 +88,7 @@ select{
 }
 
 .presentation__title{
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     width: 70vw;
@@ -99,27 +100,30 @@ select{
     width: 90vw;
 }
 
-.presentation__btn{
-    text-decoration: none;
+%btn{
     color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    padding: 1rem 1.3rem 1rem 1.3rem;
-    border-radius: 3rem;
-    margin-top: 1rem;
+    background: $btn_color;
+    border-radius: 2.8rem;
     font-size: 1.2rem;
     font-weight: 400;
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
     cursor:pointer;
-    margin-top: 2rem;
     border: none;
     outline: none;
+}
+
+.presentation__btn{
+    @extend %btn;
+    margin-top: 1rem;
+    margin-top: 2rem;
+    padding: 1.2rem 1.7rem 1.2rem 1.7rem;
 }
 
 /* Bloc fonctionnement */
 
 .section__title{ /*s'applique aux titres principaux de Fonctionnement et Restaurants*/
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .fonctionnement__title{
@@ -149,7 +153,29 @@ select{
     box-shadow: 0 0.3rem 0.8rem 0.1rem rgb(234,234,234);
     padding: 0.8rem 3rem 0.5rem 0rem;
     font-size: .92rem;
+    h3{
+        font-weight: 500;
+    }
 }
+
+.first_step{
+    h3{
+        margin-left: .4rem;
+    }
+}
+
+.second_step{
+    h3{
+        margin-left: .1rem;
+    }
+}
+
+.last_step{
+    h3{
+        margin-left: -.1rem;
+    }
+}
+
 
 .fonctionnement__card_step_number{
     background: #9356DC;
@@ -162,7 +188,7 @@ select{
 
 .fonctionnement__card_logo{
     color: grey;
-    margin: 0rem 1rem 0rem 1rem;
+    margin: 0rem 1.2rem 0rem 1rem;
 }
 
 
@@ -184,7 +210,7 @@ select{
     padding-bottom: 3rem;
 }
 
-.restaurants_title{
+.main_title{
     margin-left: 1rem;
 }
 
@@ -260,7 +286,7 @@ select{
     border:none;
     font-size: 1.5rem;
     color:white;
-    -webkit-text-stroke: 0.1rem grey;
+    -webkit-text-stroke: 0.1rem black;
     border:none;
     background: unset;
     outline:none;
@@ -292,11 +318,28 @@ h5{
     flex-direction: column;
 }
 
+.strong_links{
+    font-weight: 400;
+}
+
+.weak_links{
+    font-weight: 300;
+}
+
 .footer__links{
     text-decoration: none;
     color: white;
     margin-bottom: 0.8rem;
     font-size: 1rem;
+}
+
+.footer__logo{
+    margin-right: .6rem;
+}
+
+.footer__logo_var{
+    font-size: 0.8rem;
+    margin-right: .4rem;
 }
 
 
@@ -320,13 +363,13 @@ h5{
 
 .restaurant__title{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     position: absolute;
     bottom: -2.2rem;
     background: #f6f6f6;
-    padding: 1.5rem 0 0rem 0; 
+    padding: 1.5rem 0 0 0; 
     border-radius: 2rem 2rem 0 0 ;
 }
 
@@ -334,12 +377,13 @@ h5{
     font-family: 'Shrikhand', cursive;
     font-size: 1.8rem;
     font-weight: 500;
-    margin:0;
+    margin:0 0 0 1.3rem;
 }
 
 .like_menu{
     color: #f6f6f6;;
     -webkit-text-stroke: 0.1rem black;
+    margin-right: 2rem;
 }
 
 /*Menu */
@@ -447,17 +491,8 @@ h5{
 }
 
 .command__btn{
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    padding: 1rem 2.5rem 1rem 2.5rem;
-    border-radius: 3rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-    box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
-    cursor:pointer;
-    border: none;
-    outline: none;
+    @extend %btn;
+    padding: 1.2rem 3.2rem 1.2rem 3.2rem;
 }
 
 
@@ -513,12 +548,12 @@ h5{
 /* Survol des boutons principaux : couleur éclaircie, ombre portée plus marquée */
 
 .presentation__btn:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#b256dc));
+    background: lighten($btn_color,5%);
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .command__btn:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#b256dc));
+    background: lighten($btn_color,5%);
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 

@@ -313,7 +313,7 @@ select {
   outline: none;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   background: #eaeaea;
   cursor: pointer;
 }
@@ -338,7 +338,7 @@ select {
 }
 
 .presentation__title {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   width: 70vw;
@@ -350,29 +350,30 @@ select {
   width: 90vw;
 }
 
-.presentation__btn {
-  text-decoration: none;
+.presentation__btn, .command__btn {
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 1rem 1.3rem 1rem 1.3rem;
-  border-radius: 3rem;
-  margin-top: 1rem;
+  background: linear-gradient(358deg, #9356dc 0%, #ad5edc 23%, #b962dc 42%, #ff79da 100%);
+  border-radius: 2.8rem;
   font-size: 1.2rem;
   font-weight: 400;
   -webkit-box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
           box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
   cursor: pointer;
-  margin-top: 2rem;
   border: none;
   outline: none;
+}
+
+.presentation__btn {
+  margin-top: 1rem;
+  margin-top: 2rem;
+  padding: 1.2rem 1.7rem 1.2rem 1.7rem;
 }
 
 /* Bloc fonctionnement */
 .section__title {
   /*s'applique aux titres principaux de Fonctionnement et Restaurants*/
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .fonctionnement__title {
@@ -421,6 +422,22 @@ select {
   font-size: .92rem;
 }
 
+.fonctionnement__card h3 {
+  font-weight: 500;
+}
+
+.first_step h3 {
+  margin-left: .4rem;
+}
+
+.second_step h3 {
+  margin-left: .1rem;
+}
+
+.last_step h3 {
+  margin-left: -.1rem;
+}
+
 .fonctionnement__card_step_number {
   background: #9356DC;
   border-radius: 2rem;
@@ -432,7 +449,7 @@ select {
 
 .fonctionnement__card_logo {
   color: grey;
-  margin: 0rem 1rem 0rem 1rem;
+  margin: 0rem 1.2rem 0rem 1rem;
 }
 
 .last_step {
@@ -456,7 +473,7 @@ select {
   padding-bottom: 3rem;
 }
 
-.restaurants_title {
+.main_title {
   margin-left: 1rem;
 }
 
@@ -558,7 +575,7 @@ select {
   border: none;
   font-size: 1.5rem;
   color: white;
-  -webkit-text-stroke: 0.1rem grey;
+  -webkit-text-stroke: 0.1rem black;
   border: none;
   background: unset;
   outline: none;
@@ -599,11 +616,28 @@ h5 {
           flex-direction: column;
 }
 
+.strong_links {
+  font-weight: 400;
+}
+
+.weak_links {
+  font-weight: 300;
+}
+
 .footer__links {
   text-decoration: none;
   color: white;
   margin-bottom: 0.8rem;
   font-size: 1rem;
+}
+
+.footer__logo {
+  margin-right: .6rem;
+}
+
+.footer__logo_var {
+  font-size: 0.8rem;
+  margin-right: .4rem;
 }
 
 /*------ Gestion du style des pages secondaires -----*/
@@ -630,9 +664,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -640,7 +674,7 @@ h5 {
   position: absolute;
   bottom: -2.2rem;
   background: #f6f6f6;
-  padding: 1.5rem 0 0rem 0;
+  padding: 1.5rem 0 0 0;
   border-radius: 2rem 2rem 0 0;
 }
 
@@ -648,12 +682,13 @@ h5 {
   font-family: 'Shrikhand', cursive;
   font-size: 1.8rem;
   font-weight: 500;
-  margin: 0;
+  margin: 0 0 0 1.3rem;
 }
 
 .like_menu {
   color: #f6f6f6;
   -webkit-text-stroke: 0.1rem black;
+  margin-right: 2rem;
 }
 
 /*Menu */
@@ -789,19 +824,7 @@ h5 {
 }
 
 .command__btn {
-  text-decoration: none;
-  color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 1rem 2.5rem 1rem 2.5rem;
-  border-radius: 3rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  -webkit-box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
-          box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.315);
-  cursor: pointer;
-  border: none;
-  outline: none;
+  padding: 1.2rem 3.2rem 1.2rem 3.2rem;
 }
 
 /*Animations */
