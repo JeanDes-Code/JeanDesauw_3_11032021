@@ -240,6 +240,52 @@
   }
 }
 
+@-webkit-keyframes ball {
+  0% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+  25% {
+    -webkit-transform: translate(1rem, 0);
+            transform: translate(1rem, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 1rem);
+            transform: translate(0, 1rem);
+  }
+  75% {
+    -webkit-transform: translate(-1rem, 0);
+            transform: translate(-1rem, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+}
+
+@keyframes ball {
+  0% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+  25% {
+    -webkit-transform: translate(1rem, 0);
+            transform: translate(1rem, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 1rem);
+            transform: translate(0, 1rem);
+  }
+  75% {
+    -webkit-transform: translate(-1rem, 0);
+            transform: translate(-1rem, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+}
+
 html {
   width: 100vw;
 }
@@ -374,9 +420,6 @@ select {
   /*s'applique aux titres principaux de Fonctionnement et Restaurants*/
   font-size: 1.5rem;
   font-weight: 600;
-}
-
-.fonctionnement__title {
   padding-left: 0.3rem;
 }
 
@@ -414,11 +457,11 @@ select {
       -ms-flex-align: center;
           align-items: center;
   background: #f6f6f6;
-  border-radius: 1.5rem;
+  border-radius: 1.3rem;
   margin-bottom: 1.5rem;
   -webkit-box-shadow: 0 0.3rem 0.8rem 0.1rem #eaeaea;
           box-shadow: 0 0.3rem 0.8rem 0.1rem #eaeaea;
-  padding: 0.8rem 3rem 0.5rem 0rem;
+  padding: 1.4rem 3rem 1.4rem 0rem;
   font-size: .92rem;
 }
 
@@ -530,7 +573,7 @@ select {
 }
 
 .restaurants__new {
-  background: #99e2d0;
+  background: #99E2D0;
   font-size: 0.9rem;
   font-weight: 600;
   position: absolute;
@@ -538,7 +581,7 @@ select {
   border-radius: 0.1rem;
   top: 0.8rem;
   right: 0.8rem;
-  color: #008766;
+  color: #278870;
   z-index: 1;
 }
 
@@ -883,13 +926,13 @@ h5 {
 
 /* Survol des boutons principaux : couleur éclaircie, ombre portée plus marquée */
 .presentation__btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#b256dc));
+  background: linear-gradient(358deg, #9356dc 0%, #ad5edc 10%, #b962dc 21%, #ff79da 100%);
   -webkit-box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
           box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .command__btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#b256dc));
+  background: linear-gradient(358deg, #9356dc 0%, #ad5edc 10%, #b962dc 21%, #ff79da 100%);
   -webkit-box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
           box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
@@ -1025,18 +1068,6 @@ h5 {
           animation-fill-mode: both;
 }
 
-/*
-#menu__starter{
-    animation: fadein 1s;
-}
-
-#menu__main_course{
-    animation: fadein 3s;
-}
-
-#menu__dessert{
-    animation: fadein 4s;
-}*/
 /* Loading spinner */
 #loader {
   font-family: 'Shrikhand', cursive;
@@ -1093,37 +1124,33 @@ h5 {
   z-index: -1;
 }
 
-.loader__header_logo_position {
-  position: absolute;
-  left: 50%;
-  top: 20vh;
+/*
+.loader__logo{
+    font-size: 4rem;
+    position: relative;
+    left:-50%;
+    color:rgb(66, 66, 66);
 }
 
-.loader__logo {
-  font-size: 4rem;
-  position: relative;
-  left: -50%;
-  color: #424242;
+.loader__header_logo_start{
+    -webkit-animation: hourglass-start 1700ms 300ms ease-in-out;
+    animation: hourglass-start 1700ms 300ms ease-in-out ;
+    opacity: 0;
 }
 
-.loader__header_logo_start {
-  -webkit-animation: hourglass-start 1700ms 300ms ease-in-out;
-  animation: hourglass-start 1700ms 300ms ease-in-out;
-  opacity: 0;
+.loader__header_logo_half{
+    -webkit-animation: hourglass 1700ms 1820ms;
+    animation: hourglass 1700ms 1820ms;
+    opacity: 0;
+
 }
 
-.loader__header_logo_half {
-  -webkit-animation: hourglass 1700ms 1820ms;
-  animation: hourglass 1700ms 1820ms;
-  opacity: 0;
+.loader__header_logo_end{ 
+    -webkit-animation: hourglass-end 1300ms ease-out 3350ms;
+    animation: hourglass-end 1300ms 3350ms;
+    opacity: 0;
 }
-
-.loader__header_logo_end {
-  -webkit-animation: hourglass-end 1300ms ease-out 3350ms;
-  animation: hourglass-end 1300ms 3350ms;
-  opacity: 0;
-}
-
+*/
 .loader__message_box {
   position: relative;
 }
@@ -1175,5 +1202,65 @@ h5 {
   position: absolute;
   top: 50vh;
   left: 50%;
+}
+
+.loader__header_ball_position {
+  position: absolute;
+  left: 50%;
+  top: 30vh;
+}
+
+.ball {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  left: -50%;
+  display: inline-block;
+}
+
+.b-1 {
+  background: #9356DC;
+}
+
+.b-2 {
+  background: #FF79DA;
+}
+
+.b-3 {
+  background: #99E2D0;
+}
+
+.b-1 {
+  -webkit-animation-name: ball;
+          animation-name: ball;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-delay: 125ms;
+          animation-delay: 125ms;
+}
+
+.b-2 {
+  -webkit-animation-name: ball;
+          animation-name: ball;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+.b-3 {
+  -webkit-animation-name: ball;
+          animation-name: ball;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-delay: 375ms;
+          animation-delay: 375ms;
 }
 /*# sourceMappingURL=style.css.map */

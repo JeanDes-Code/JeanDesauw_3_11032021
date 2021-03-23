@@ -239,4 +239,50 @@
     opacity: 1;
   }
 }
+
+@-webkit-keyframes ball {
+  0% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+  25% {
+    -webkit-transform: translate(1rem, 0);
+            transform: translate(1rem, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 1rem);
+            transform: translate(0, 1rem);
+  }
+  75% {
+    -webkit-transform: translate(-1rem, 0);
+            transform: translate(-1rem, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+}
+
+@keyframes ball {
+  0% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+  25% {
+    -webkit-transform: translate(1rem, 0);
+            transform: translate(1rem, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 1rem);
+            transform: translate(0, 1rem);
+  }
+  75% {
+    -webkit-transform: translate(-1rem, 0);
+            transform: translate(-1rem, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
+  }
+}
 /*# sourceMappingURL=animations.css.map */

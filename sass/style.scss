@@ -1,9 +1,13 @@
 @import 'animations.scss';
 
 $primary:#9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
 $degrade: linear-gradient(#FF79DA, #9356DC);
 $degrade-inv: linear-gradient( #9356DC, #FF79DA);
 $btn_color: linear-gradient(358deg, rgba(147,86,220,1) 0%, rgba(173,94,220,1) 23%, rgba(185,98,220,1) 42%, rgba(255,121,218,1) 100%);
+$btn_color_active: linear-gradient(358deg, rgba(147,86,220,1) 0%, rgba(173,94,220,1) 10%, rgba(185,98,220,1) 21%, rgba(255,121,218,1) 100%);
+
 
 html{
     width: 100vw;
@@ -124,9 +128,6 @@ select{
 .section__title{ /*s'applique aux titres principaux de Fonctionnement et Restaurants*/
     font-size: 1.5rem;
     font-weight: 600;
-}
-
-.fonctionnement__title{
     padding-left: 0.3rem;
 }
 
@@ -148,10 +149,10 @@ select{
     width: 70vw;
     align-items: center;
     background: #f6f6f6;
-    border-radius: 1.5rem;
+    border-radius: 1.3rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 0.3rem 0.8rem 0.1rem rgb(234,234,234);
-    padding: 0.8rem 3rem 0.5rem 0rem;
+    padding: 1.4rem 3rem 1.4rem 0rem;
     font-size: .92rem;
     h3{
         font-weight: 500;
@@ -250,7 +251,7 @@ select{
 }
 
 .restaurants__new{
-    background: rgb(153,226,208);
+    background: $tertiary;
     font-size: 0.9rem;
     font-weight: 600;
     position: absolute;
@@ -258,7 +259,7 @@ select{
     border-radius: 0.1rem;
     top: 0.8rem;
     right: 0.8rem;
-    color: rgb(0,135,102);
+    color: darken($tertiary, 40%);
     z-index: 1;
 }
 
@@ -548,12 +549,12 @@ h5{
 /* Survol des boutons principaux : couleur éclaircie, ombre portée plus marquée */
 
 .presentation__btn:hover{
-    background: lighten($btn_color,5%);
+    background: $btn_color_active;
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .command__btn:hover{
-    background: lighten($btn_color,5%);
+    background: $btn_color_active;
     box-shadow: 0rem 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
@@ -567,20 +568,6 @@ h5{
         animation-fill-mode: both;
     }
 }
-/*
-#menu__starter{
-    animation: fadein 1s;
-}
-
-#menu__main_course{
-    animation: fadein 3s;
-}
-
-#menu__dessert{
-    animation: fadein 4s;
-}*/
-
-
 
 /* Loading spinner */
 
@@ -630,12 +617,8 @@ h5{
     z-index: -1;
 }
 
-.loader__header_logo_position{
-    position: absolute;
-    left: 50%;
-    top: 20vh;
-}
 
+/*
 .loader__logo{
     font-size: 4rem;
     position: relative;
@@ -661,7 +644,7 @@ h5{
     animation: hourglass-end 1300ms 3350ms;
     opacity: 0;
 }
-
+*/
 .loader__message_box{
     position: relative;
 }
@@ -707,4 +690,40 @@ h5{
     left:50%;
 }
 
+
+.loader__header_ball_position{
+    position: absolute;
+    left: 50%;
+    top: 30vh;
+}
+
+.ball {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: -50%;
+    display: inline-block;
+}
+.b-1 {
+    background: $primary;
+}
+
+.b-2 {
+    background: $secondary;
+}
+
+.b-3 {
+    background: $tertiary;
+}
+
+
+@for $i from 1 through 3 {
+    .b-#{$i}{
+        animation-name: ball;
+        animation-iteration-count: infinite;
+        animation-duration: 500ms;
+        animation-delay: 0 + ($i * 125ms);
+    }
+}
 
