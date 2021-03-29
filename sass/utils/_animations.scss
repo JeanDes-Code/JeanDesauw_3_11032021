@@ -1,0 +1,143 @@
+/*Animations --- Keyframes */
+
+@keyframes scrolling-text {
+    0% {
+        transform: translateX(-100rem);
+        opacity:0.9;
+        transform-origin: left;
+    }
+    20%, 80% {
+        transform: translateX(0rem);
+        transform-origin: left;
+    }
+    99%{
+        opacity: 1;
+    }
+    100% {
+        transform:translateX(100rem);
+        transform-origin: left;
+        opacity:0;
+    }    
+}
+
+@keyframes loader-vanish {
+    0%,99% {
+        opacity: 1;
+        z-index: 2;
+    }
+    99.5% {
+        opacity: 0.8;
+        z-index: 2;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes fadein-out {
+    0%{
+        opacity:0;
+    }
+    25%, 75%{
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@keyframes fadein {
+    0%{
+        opacity:0;
+        transform: translate(0,0.5rem);
+    }
+    100% {
+        opacity:1;
+        transform: translate(0,0);
+    }
+}
+
+@keyframes ball-left {
+    25%{
+        transform: translateX(-5rem);
+        animation-timing-function: ease-in;
+    }
+    50%{
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes ball-right {
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(5rem);
+        animation-timing-function: ease-in;
+    }
+    100%{
+        transform: translateX(0);
+    }
+  }
+
+  
+/*Animations */
+/* Ajout de plats */
+
+.menu__card:hover .meal__selected, .menu__card:active .meal__selected, .menu__card:focus .meal__selected{
+    right:0;
+    transition: right 400ms;
+}
+
+.menu__card:hover .meal__selected_logo, .menu__card:active .meal__selected_logo, .menu__card:focus .meal__selected_logo{
+    transform: rotate(720deg);
+    transition: 500ms ;
+}
+
+.menu__card:hover .meal__price, .menu__card:active .meal__price, .menu__card:focus .meal__price{
+    right: 5.5rem;
+    transition: right 300ms;
+}
+
+.menu__card:hover .meal__description, .menu__card:active .meal__description, .menu__card:focus .meal__description{
+    width: 70%;
+    transition: 300ms;
+}
+
+.menu__card:hover .meal__title, .menu__card:active .meal__title, .menu__card:focus .meal__title{
+    width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Remplissage du bouton "j'aime" */
+
+.like:hover, .like:active, .like:focus{
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-text-stroke: transparent;
+    overflow: visible;
+    transform:  scale(1.2);
+    -moz-transform: scale(1.2);
+    transition: 400ms cubic-bezier(.31,.82,.05,3);
+    -moz-transition:400ms cubic-bezier(.31,.82,.05,3);
+    outline:none;
+}
+
+/* Apparition proggressive des plats sur les pages menus */
+
+@for $i from 1 through 13 {
+    .m-#{$i}{
+        opacity: 1;
+        animation: fadein 500ms;
+        animation-delay: 0 + ($i * 100ms);
+        animation-fill-mode: both;
+    }
+}

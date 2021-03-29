@@ -29,11 +29,13 @@ p{
 header{
     padding-top: 2rem;
     padding-bottom: 1.5rem;
+    .return_home{
+    top: 2.5rem;
+    font-size: 3rem;
+}
 }
 
-.return_home{
-    top: 2.5rem;
-}
+
 
 #localisation{
     width: $width;
@@ -108,7 +110,7 @@ header{
     margin-top: 6rem;
 }
 
-.restaurant__card_img_container{
+.restaurants__card_img_container{
     width: $width;
 }
 

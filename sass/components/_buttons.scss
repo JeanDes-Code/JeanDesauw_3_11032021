@@ -1,0 +1,69 @@
+/* Selecteur de quartier parisien */
+
+select{
+    border: none;
+    appearance: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background: $dark-background;
+    cursor: pointer;
+}
+
+
+/* Bouton "Explorer nos restaurants" Page d'accueil */
+
+.presentation__btn{
+    @extend %btn;
+    margin-top: 1rem;
+    margin-top: 2rem;
+    padding: 1.2rem 1.7rem 1.2rem 1.7rem;
+}
+
+/* Bouton "J'aime" */
+
+.like{
+    background:none;
+    border:none;
+    font-size: 1.5rem;
+    color:white;
+    -webkit-text-stroke: 0.1rem black;
+    border:none;
+    background: unset;
+    outline:none;
+    cursor: pointer;
+}
+
+/*Variante pour pages de selection des menus */
+.like_menu{
+    color: $light-background;
+    -webkit-text-stroke: 0.1rem black;
+    margin-right: 2rem;
+}
+
+
+/* Bouton de commande du menu */
+
+#order__btn{
+    background:#f6f6f6;
+    margin-bottom: 5rem;
+}
+
+.command__btn{
+    @extend %btn;
+    padding: 1.2rem 3.2rem 1.2rem 3.2rem;
+}
+
+
+/* Survol des boutons principaux : couleur éclaircie, ombre portée plus marquée */
+
+.presentation__btn:hover{
+    background: $btn_color_active;
+    box-shadow: $shadow-btn;
+}
+
+.command__btn:hover{
+    background: $btn_color_active;
+    box-shadow: $shadow-btn;
+}
