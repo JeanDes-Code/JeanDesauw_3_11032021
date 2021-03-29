@@ -1,0 +1,25 @@
+/*Bloc présentation*/
+
+#presentation{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: $light-background;
+    width: 100vw;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.presentation__title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    width: 70vw;
+}
+
+.presentation__text{
+    font-weight: 300;
+    font-size: 1.2rem;
+    width: 90vw;
+}

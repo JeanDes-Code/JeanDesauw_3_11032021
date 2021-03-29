@@ -1,0 +1,68 @@
+/* Bloc fonctionnement */
+
+.section__title{ /*s'applique aux titres principaux de Fonctionnement et Restaurants*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 0.3rem;
+}
+
+#fonctionnement{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    &__steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.fonctionnement__card{
+    display:flex;
+    width: 70vw;
+    align-items: center;
+    background: $light-background;
+    border-radius: 1.3rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.3rem 0.8rem 0.1rem $dark-background;
+    padding: 1.4rem 3rem 1.4rem 0rem;
+    font-size: .92rem;
+    h3{
+        font-weight: 500;
+    }
+    &_logo{
+        color: grey;
+        margin: 0rem 1.2rem 0rem 1rem;
+    }&_step_number{
+        background: $primary;
+        border-radius: 2rem;
+        padding: 0.2rem 0.5rem 0.1rem 0.5rem;
+        margin-left: -1rem;
+        margin-right: 0.5rem;
+        color: white;
+    }
+}
+
+.first_step{
+    h3{
+        margin-left: .4rem;
+    }
+}
+
+.second_step{
+    h3{
+        margin-left: .1rem;
+    }
+}
+
+.last_step{
+    background: rgb(245,237,255);
+    h3{
+        margin-left: -.1rem;
+    }
+}
+
+.logo_last_step{
+    color:$primary;
+}

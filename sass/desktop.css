@@ -23,8 +23,9 @@ header {
   padding-bottom: 1.5rem;
 }
 
-.return_home {
+header .return_home {
   top: 2.5rem;
+  font-size: 3rem;
 }
 
 #localisation {
@@ -117,7 +118,7 @@ header {
   margin-top: 6rem;
 }
 
-.restaurant__card_img_container {
+.restaurants__card_img_container {
   width: unset;
 }
 
