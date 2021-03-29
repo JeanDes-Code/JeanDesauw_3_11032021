@@ -130,18 +130,26 @@
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
+    -webkit-transform: translate(0, 0.5rem);
+            transform: translate(0, 0.5rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
 @keyframes fadein {
   0% {
     opacity: 0;
+    -webkit-transform: translate(0, 0.5rem);
+            transform: translate(0, 0.5rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
@@ -262,130 +270,130 @@
 /* Apparition proggressive des plats sur les pages menus */
 .m-1 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-2 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-3 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-4 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-5 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-6 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 1800ms;
-          animation-delay: 1800ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-7 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 2100ms;
-          animation-delay: 2100ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-8 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 2400ms;
-          animation-delay: 2400ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-9 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 2700ms;
-          animation-delay: 2700ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-10 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 3000ms;
-          animation-delay: 3000ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-11 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 3300ms;
-          animation-delay: 3300ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 1100ms;
+          animation-delay: 1100ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-12 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 3600ms;
-          animation-delay: 3600ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .m-13 {
   opacity: 1;
-  -webkit-animation: fadein 800ms;
-          animation: fadein 800ms;
-  -webkit-animation-delay: 3900ms;
-          animation-delay: 3900ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
+  -webkit-animation-delay: 1300ms;
+          animation-delay: 1300ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -619,6 +627,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
   position: relative;
 }
 

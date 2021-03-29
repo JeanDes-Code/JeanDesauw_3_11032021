@@ -50,9 +50,11 @@
 @keyframes fadein {
     0%{
         opacity:0;
+        transform: translate(0,0.5rem);
     }
     100% {
         opacity:1;
+        transform: translate(0,0);
     }
 }
 
@@ -134,8 +136,8 @@
 @for $i from 1 through 13 {
     .m-#{$i}{
         opacity: 1;
-        animation: fadein 800ms;
-        animation-delay: 0 + ($i * 300ms);
+        animation: fadein 500ms;
+        animation-delay: 0 + ($i * 100ms);
         animation-fill-mode: both;
     }
 }
