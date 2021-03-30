@@ -22,6 +22,158 @@
 }
 
 /*Animations --- Keyframes */
+/*Bouton "j'aime" */
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.6;
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.6;
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*Apparition des plats */
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0.5rem);
+            transform: translate(0, 0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0.5rem);
+            transform: translate(0, 0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+/*loader */
+/* Loader main */
+@-webkit-keyframes loader-vanish {
+  0%, 99% {
+    opacity: 1;
+    z-index: 2;
+  }
+  99.5% {
+    opacity: 0.8;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader-vanish {
+  0%, 99% {
+    opacity: 1;
+    z-index: 2;
+  }
+  99.5% {
+    opacity: 0.8;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/*Loader balls*/
+@-webkit-keyframes ball-left {
+  25% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes ball-left {
+  25% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes ball-right {
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes ball-right {
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+/* loader text */
 @-webkit-keyframes scrolling-text {
   0% {
     -webkit-transform: translateX(-100rem);
@@ -73,146 +225,6 @@
   }
 }
 
-@-webkit-keyframes loader-vanish {
-  0%, 99% {
-    opacity: 1;
-    z-index: 2;
-  }
-  99.5% {
-    opacity: 0.8;
-    z-index: 2;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes loader-vanish {
-  0%, 99% {
-    opacity: 1;
-    z-index: 2;
-  }
-  99.5% {
-    opacity: 0.8;
-    z-index: 2;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@-webkit-keyframes fadein-out {
-  0% {
-    opacity: 0;
-  }
-  25%, 75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadein-out {
-  0% {
-    opacity: 0;
-  }
-  25%, 75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(0, 0.5rem);
-            transform: translate(0, 0.5rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(0, 0.5rem);
-            transform: translate(0, 0.5rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-@-webkit-keyframes ball-left {
-  25% {
-    -webkit-transform: translateX(-5rem);
-            transform: translateX(-5rem);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes ball-left {
-  25% {
-    -webkit-transform: translateX(-5rem);
-            transform: translateX(-5rem);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes ball-right {
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  75% {
-    -webkit-transform: translateX(5rem);
-            transform: translateX(5rem);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes ball-right {
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  75% {
-    -webkit-transform: translateX(5rem);
-            transform: translateX(5rem);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
 /*Animations */
 /* Ajout de plats */
 .menu__card:hover .meal__selected, .menu__card:active .meal__selected, .menu__card:focus .meal__selected {
@@ -254,16 +266,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  -moz-text-stroke: transparent;
   overflow: visible;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transition: 400ms cubic-bezier(0.31, 0.82, 0.05, 3);
-  transition: 400ms cubic-bezier(0.31, 0.82, 0.05, 3);
-  -moz-transition: 400ms cubic-bezier(0.31, 0.82, 0.05, 3);
+  -webkit-animation: heart 500ms ease-in-out forwards;
+          animation: heart 500ms ease-in-out forwards;
   outline: none;
 }
 
@@ -440,13 +445,9 @@ select {
 
 /* Bouton "J'aime" */
 .like {
-  background: none;
-  border: none;
   font-size: 1.5rem;
   color: white;
   -webkit-text-stroke: 0.1rem black;
-  border: none;
-  background: unset;
   outline: none;
   cursor: pointer;
 }
@@ -456,6 +457,9 @@ select {
   color: #f6f6f6;
   -webkit-text-stroke: 0.1rem black;
   margin-right: 2rem;
+  border: none;
+  background: unset;
+  outline: none;
 }
 
 /* Bouton de commande du menu */

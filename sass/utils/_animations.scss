@@ -1,25 +1,39 @@
 /*Animations --- Keyframes */
 
-@keyframes scrolling-text {
-    0% {
-        transform: translateX(-100rem);
-        opacity:0.9;
-        transform-origin: left;
+
+/*Bouton "j'aime" */
+
+@keyframes heart {
+    0%{
+        transform: scale(1);
+        opacity:0.6;
     }
-    20%, 80% {
-        transform: translateX(0rem);
-        transform-origin: left;
+    75%{
+        transform: scale(1.1);
     }
-    99%{
-        opacity: 1;
+    100%{
+        transform: scale(1);
+        opacity:1;
     }
-    100% {
-        transform:translateX(100rem);
-        transform-origin: left;
-        opacity:0;
-    }    
 }
 
+/*Apparition des plats */
+
+@keyframes fadein {
+    0%{
+        opacity:0;
+        transform: translate(0,0.5rem);
+    }
+    100% {
+        opacity:1;
+        transform: translate(0,0);
+    }
+}
+
+
+/*loader */
+
+/* Loader main */
 @keyframes loader-vanish {
     0%,99% {
         opacity: 1;
@@ -35,29 +49,7 @@
     }
 }
 
-@keyframes fadein-out {
-    0%{
-        opacity:0;
-    }
-    25%, 75%{
-        opacity:1;
-    }
-    100% {
-        opacity:0;
-    }
-}
-
-@keyframes fadein {
-    0%{
-        opacity:0;
-        transform: translate(0,0.5rem);
-    }
-    100% {
-        opacity:1;
-        transform: translate(0,0);
-    }
-}
-
+/*Loader balls*/
 @keyframes ball-left {
     25%{
         transform: translateX(-5rem);
@@ -80,6 +72,28 @@
         transform: translateX(0);
     }
   }
+
+  /* loader text */
+
+  @keyframes scrolling-text {
+    0% {
+        transform: translateX(-100rem);
+        opacity:0.9;
+        transform-origin: left;
+    }
+    20%, 80% {
+        transform: translateX(0rem);
+        transform-origin: left;
+    }
+    99%{
+        opacity: 1;
+    }
+    100% {
+        transform:translateX(100rem);
+        transform-origin: left;
+        opacity:0;
+    }    
+}
 
   
 /*Animations */
@@ -120,14 +134,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -moz-text-stroke: transparent;
     overflow: visible;
-    transform:  scale(1.2);
-    -moz-transform: scale(1.2);
-    transition: 400ms cubic-bezier(.31,.82,.05,3);
-    -moz-transition:400ms cubic-bezier(.31,.82,.05,3);
+    animation: heart 500ms ease-in-out forwards;
     outline:none;
 }
 

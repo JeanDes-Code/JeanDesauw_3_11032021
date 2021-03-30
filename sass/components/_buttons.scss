@@ -24,13 +24,9 @@ select{
 /* Bouton "J'aime" */
 
 .like{
-    background:none;
-    border:none;
     font-size: 1.5rem;
     color:white;
     -webkit-text-stroke: 0.1rem black;
-    border:none;
-    background: unset;
     outline:none;
     cursor: pointer;
 }
@@ -40,6 +36,9 @@ select{
     color: $light-background;
     -webkit-text-stroke: 0.1rem black;
     margin-right: 2rem;
+    border:none;
+    background: unset;
+    outline:none;
 }
 
 
