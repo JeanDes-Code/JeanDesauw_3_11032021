@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tablet.css" media="all and (min-width: 763px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/desktop.css" media="all and (min-width: 1025px)">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">  
     <script src="https://kit.fontawesome.com/8ed4d3c170.js" crossorigin="anonymous"></script>
@@ -19,11 +21,44 @@
         </h1>
     </header>
 
+    <section id="loader">
+        <div class="loader__border_top"></div>
+        <div class="loader__header">
+            <div class="loader__header_ball_position">
+                <div class="ball b-1"></div>
+                <div class="ball b-2"></div>
+                <div class="ball b-3"></div>
+            </div>
+        </div>
+        <div class="loader__message_box">
+            <div class="loader__message loader__message--1">
+                <div class="loader__message_position">
+                    <h6> Création des menus </h6>
+                    <div class="loader__message_logo"> <i class="fas fa-utensils"></i> </div>
+                </div>
+            </div>
+            <div class="loader__message loader__message--2">
+                <div class="loader__message_position">
+                    <h6> Recrutement des équipes </h6>
+                    <div class="loader__message_logo"> <i class="fas fa-users"></i> </div>
+                </div>
+            </div>
+            <div class="loader__message loader__message--3">
+                <div class="loader__message_position">    
+                    <h6> Mise en place des restaurants </h6>
+                    <div class="loader__message_logo"> <i class="fas fa-concierge-bell"></i> </div>
+                </div>
+            </div>
+        </div>
+        <div class="loader__border_bottom"></div>
+        <div class="loader__background"></div>
+    </section>
+
     <section id="localisation">
         <i class="fas fa-map-marker-alt localisation__logo"></i>
         <h4>
             <select>
-                <optgroup label="Quartier parisien">
+                <optgroup label="Quartiers parisiens">
                     <option >
                         Paris, Belleville
                     </option>
@@ -41,21 +76,21 @@
     <section id="presentation">
         <h2 class="presentation__title">Réservez le menu qui vous convient</h2>
         <p class="presentation__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a class="presentation__btn" href='#'> Explorer nos restaurants</a>
+        <button class="presentation__btn" type="button"> Explorer nos restaurants</button>
     </section>
 
     <section id="fonctionnement">
         <h2 class="section__title"> Fonctionnement </h2>
         <div id="fonctionnement__steps">
-            <div class="fonctionnement__card">
+            <div class="fonctionnement__card first_step">
                 <span class="fonctionnement__card_step_number"> 1 </span>
                 <i class="fas fa-mobile-alt fonctionnement__card_logo"></i>
-                <h3 class="fonctionnement__card_title"> Choisissez un restaurant </h3>    
+                <h3 class="fonctionnement__card_title "> Choisissez un restaurant </h3>    
             </div>
-            <div class="fonctionnement__card">
+            <div class="fonctionnement__card second_step">
                 <span class="fonctionnement__card_step_number"> 2 </span>
                 <i class="fas fa-list-ul fonctionnement__card_logo logo_step_two"></i>
-                <h3 class="fonctionnement__card_title"> Composez votre menu </h3>    
+                <h3 class="fonctionnement__card_title second_step_title"> Composez votre menu </h3>    
             </div>
             <div class="fonctionnement__card last_step">
                 <span class="fonctionnement__card_step_number"> 3 </span>
@@ -66,15 +101,15 @@
     </section>
 
     <main id="restaurants">
-        <h2 class="section__title restaurants_title"> Restaurants </h2>
+        <h2 class="section__title main_title"> Restaurants </h2>
         <div>
             <article class="restaurants__card">
-                    <a class="restaurants__card_link" href="#">
+                    <a class="restaurants__card_link" href="pages/lapalettedugout.html">
                         <div class="restaurants__card_graphic_container">
                             <div class="restaurants__new">
                                 <p> Nouveau </p>
                             </div>
-                            <div class="restaurant__card_img_container"> 
+                            <div class="restaurants__card_img_container"> 
                                 <img class="restaurants__card_img" src="images/restaurants/lapalettedugout.jpg" alt="La palette du goût"/>
                             </div>
                         </div>
@@ -84,16 +119,18 @@
                                 <p> Ménilmontant </p>
                             </div>
                             <div class="restaurants__card_like">
-                                    <i class="like_btn far fa-heart"></i>
+                                <div class="like">    
+                                    <i class="like_btn fas fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </a>
-                    <a class="restaurants__card_link" href="#">
+                    <a class="restaurants__card_link" href="pages/lanoteenchantee.html">
                         <div class="restaurants__card_graphic_container">
                             <div class="restaurants__new">
                                 <p> Nouveau </p>
                             </div>
-                            <div class="restaurant__card_img_container"> 
+                            <div class="restaurants__card_img_container"> 
                                 <img class="restaurants__card_img" src="images/restaurants/lanoteenchante.jpg" alt="La note enchantée"/>
                             </div>
                         </div>
@@ -103,13 +140,15 @@
                                 <p> Charonne </p>
                             </div>
                             <div class="restaurants__card_like">
-                                    <i class="like_btn far fa-heart"></i>
+                                <div class="like">    
+                                    <i class="like_btn fas fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </a>
-                    <a class="restaurants__card_link" href="#">
+                    <a class="restaurants__card_link" href="pages/alafrancaise.html">
                         <div class="restaurants__card_graphic_container">
-                            <div class="restaurant__card_img_container"> 
+                            <div class="restaurants__card_img_container"> 
                                 <img class="restaurants__card_img" src="images/restaurants/alafrancaise.jpg" alt="À la française"/>
                             </div>
                         </div>
@@ -119,13 +158,15 @@
                                 <p> Cité Rouge </p>
                             </div>
                             <div class="restaurants__card_like">
-                                    <i class="like_btn far fa-heart"></i>
+                                <div class="like">    
+                                    <i class="like_btn fas fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </a>
-                    <a class="restaurants__card_link" href="#">
+                    <a class="restaurants__card_link" href="pages/ledelicedessens.html">
                         <div class="restaurants__card_graphic_container">
-                            <div class="restaurant__card_img_container"> 
+                            <div class="restaurants__card_img_container"> 
                                 <img class="restaurants__card_img" src="images/restaurants/ledelicedessens.jpg" alt="Le délice des sens"/>
                             </div>
                         </div>
@@ -135,7 +176,9 @@
                                 <p> Folie-Méricourt </p>
                             </div>
                             <div class="restaurants__card_like">
-                                    <i class="like_btn far fa-heart"></i>
+                                <div class="like">    
+                                    <i class="like_btn fas fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </a>      
@@ -144,10 +187,16 @@
     </main>
     <footer>
         <h5>ohmyfood</h5>
-        <a class="footer__links" href='#'> <i class="fas fa-utensils"></i> Proposer un restaurant</a>
-        <a class="footer__links" href='#'> <i class="fas fa-hands-helping"></i> Devenir partenaire</a>
-        <a class="footer__links" href='#'> Mentions légales</a>
-        <a class="footer__links" href='mailto:desauwjean@gmail.com'> Contact</a>
+        <div class="footer__container">
+            <div class="footer__bloc">
+                <a class="footer__links strong_links" href='#'> <i class="footer__logo fas fa-utensils"></i> Proposer un restaurant</a>
+                <a class="footer__links strong_links" href='#'> <i class="footer__logo footer__logo_var fas fa-hands-helping"></i> Devenir partenaire</a>
+            </div>
+            <div class="footer__bloc">
+                <a class="footer__links weak_links" href='#'> Mentions légales</a>
+                <a class="footer__links weak_links" href='mailto:desauwjean@gmail.com'> Contact</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
